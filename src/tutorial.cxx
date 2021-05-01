@@ -2,6 +2,7 @@
 #include <cmath>
 #include <iostream>
 
+#include "MathFunctions.h"
 #include "TutorialConfig.h"
 
 int main(int argc, char *argv[]) {
@@ -16,10 +17,11 @@ int main(int argc, char *argv[]) {
   // convert input to double (not through atof)
   const double inputValue = std::stod(argv[1]);
 
-  // calculate squre root
+  // calculate square root
   const double outputValue = sqrt(inputValue);
   std::cout << "The square root of " << inputValue << " is " << outputValue
             << std::endl;
+  const double outputValue1 = mysqrt(inputValue);
 
   return 0;
 }

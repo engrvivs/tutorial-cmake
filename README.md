@@ -1,5 +1,7 @@
 # CMake - Tutorial
 
+## Step 2: tag 0.4.* - Add a Library
+
 ## References
 
 - [cmake.org](https://cmake.org/cmake/help/v3.16/guide/tutorial/index.html)
