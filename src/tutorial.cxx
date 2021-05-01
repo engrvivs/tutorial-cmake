@@ -1,7 +1,8 @@
 // A simple program that computes the squre root of a number
-#include "TutorialConfig.h"
 #include <cmath>
 #include <iostream>
+
+#include "TutorialConfig.h"
 
 int main(int argc, char *argv[]) {
   if (argc < 2) {
