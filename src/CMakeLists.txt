@@ -3,10 +3,14 @@ cmake_minimum_required(VERSION 3.16.3)
 #set the project name and its version
 project(
     Tutorial
-    VERSION 0.3.0
+    VERSION 0.3.1
 )
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+# specify the C++ standard
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # configure a header file to pass the version # to the source code;
 # configured file will be written into the binary tree (thus, added later)

@@ -12,8 +12,8 @@ int main(int argc, char *argv[]) {
     return 1;
   }
 
-  // convert input to double
-  const double inputValue = atof(argv[1]);
+  // convert input to double (not through atof)
+  const double inputValue = std::stod(argv[1]);
 
   // calculate squre root
   const double outputValue = sqrt(inputValue);
