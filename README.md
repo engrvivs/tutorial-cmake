@@ -4,6 +4,11 @@
 
 - tag: 0.5.0 - classic approach to optionally include a library
 
+## Step 3: tags 0.5.1 - Add a Library (INTERFACE usage requirement)
+
+- Anbody linking to MathFunctions library needs to include the current source
+directory, while MathFunctions itself doesn't
+
 ## References
 
 - [cmake.org](https://cmake.org/cmake/help/v3.16/guide/tutorial/index.html)

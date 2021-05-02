@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.16.3)
 #set the project name and its version
 project(
     Tutorial
-    VERSION 0.5.0
+    VERSION 0.5.1
 )
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -25,7 +25,8 @@ if(USE_MYMATH)
     # add the MathFunctions library, to build it
     add_subdirectory(MathFunctions)
     list(APPEND EXTRA_LIBS MathFunctions)
-    list(APPEND EXTRA_INCLUDES "${PROJECT_SOURCE_DIR}/MathFunctions")
+    # As MathFunctions usage requirement is specified, 
+    # thus, ${EXTRA_INCLUDES} can be removed.
 endif()
 
 # add the executable
@@ -39,8 +40,9 @@ target_link_libraries(
 
 # add binary tree directory to the search paths list for include files
 # to find TutorialConfig.h
+# As MathFunctions usage requirement is specified, 
+# thus, ${EXTRA_INCLUDES} can be removed.
 target_include_directories(
     Tutorial PUBLIC
     "${PROJECT_BINARY_DIR}"
-    ${EXTRA_INCLUDES}
 )
