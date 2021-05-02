@@ -9,7 +9,7 @@
 - Anbody linking to MathFunctions library needs to include the current source
 directory, while MathFunctions itself doesn't
 
-## Step 4: basic install (0.5.3)
+## Step 4: basic install (0.5.3) and test support (0.5.4) through CMake
 
 ## References
 
