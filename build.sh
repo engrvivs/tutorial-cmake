@@ -1,11 +1,23 @@
 #!/bin/bash
+#set -x
+#set -v
 
 echo "Removing earlier build ..."
+rm -rf .cache/
 rm -rf build
 
 echo "Creating new build"
 mkdir build
 cd build
 
-cmake ../src/
+## Option to include custom (math) library - S ##
+read -p "USE_MYMATH (ON/OFF): " use_mymath
+if [[ "${use_mymath^^}" != "ON" ]]
+then
+    cmake ../src/
+else
+    cmake -DUSE_MYMATH=ON ../src/
+fi
+## Option to include custom (math) library - E ##
+
 cmake --build .

@@ -1,6 +1,8 @@
 # CMake - Tutorial
 
-## Step 2: tag 0.4.* - Add a Library
+## Step 2: tags 0.4.0, 0.5.0 - Add a Library
+
+- tag: 0.5.0 - classic approach to optionally include a library
 
 ## References
 
