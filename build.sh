@@ -27,3 +27,8 @@ fi
 cmake --install
 
 cmake --build .
+
+# run tests
+#ctest -N
+#ctest -VV
+ctest -C Debug -VV
