@@ -9,6 +9,8 @@
 - Anbody linking to MathFunctions library needs to include the current source
 directory, while MathFunctions itself doesn't
 
+## Step 4: basic install (0.5.3)
+
 ## References
 
 - [cmake.org](https://cmake.org/cmake/help/v3.16/guide/tutorial/index.html)
