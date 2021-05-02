@@ -20,4 +20,10 @@ else
 fi
 ## Option to include custom (math) library - E ##
 
+# install appropriate header files, libraries and executables
+# CMAKE_INSTALL_PREFIX to determine the root of where files will be installed
+# --prefix to provide custom installation directory
+# --config to specify configuration
+cmake --install
+
 cmake --build .
