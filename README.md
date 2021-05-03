@@ -9,7 +9,13 @@
 - Anbody linking to MathFunctions library needs to include the current source
 directory, while MathFunctions itself doesn't
 
-## Step 4: basic install (0.5.3) and test support (0.5.4) through CMake
+## Step 4: Basic Install (0.5.3) and Test support (0.5.4) through CMake
+
+## Step 5: (0.6.0) System Inspection
+
+- test for availability of platform specific functions using `CheckSymbolExists`
+module
+- accordingly, use new defines in `TutotialConfig.h.in`
 
 ## References
 
