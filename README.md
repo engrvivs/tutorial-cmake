@@ -11,7 +11,7 @@ directory, while MathFunctions itself doesn't
 
 ## Step 4: Basic Install ([0.5.3](https://github.com/engrvivs/tutorial-cmake/releases/tag/0.5.3)) and Test support ([0.5.4](https://github.com/engrvivs/tutorial-cmake/releases/tag/0.5.4)) through CMake
 
-## Step 5: ([0.6.0](https://github.com/engrvivs/tutorial-cmake/releases/tag/0.6.0-lw)/[0.6.1]((https://github.com/engrvivs/tutorial-cmake/releases/tag/0.6.1-lw))) System Inspection
+## Step 5: ([0.6.0](https://github.com/engrvivs/tutorial-cmake/releases/tag/0.6.0-lw)/[0.6.1](https://github.com/engrvivs/tutorial-cmake/releases/tag/0.6.1-lw))/[0.6.2](https://github.com/engrvivs/tutorial-cmake/releases/tag/0.6.2-lw) System Inspection
 
 - test for availability of platform specific functions using `CheckSymbolExists`
 module
