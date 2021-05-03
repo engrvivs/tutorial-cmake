@@ -1,9 +1,6 @@
 #include <cmath> // to simulate usage of platform-specific functions
 #include <iostream>
 
-// to check if the platform-specific functions exist or not
-#include "TutorialConfig.h"
-
 // a hack square root calculation using simple operations
 double mysqrt(double x) {
   if (x <= 0) {

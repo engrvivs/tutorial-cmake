@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.16.3)
 #set the project name and its version
 project(
     Tutorial
-    VERSION 0.6.2
+    VERSION 0.6.3
 )
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -15,13 +15,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # option to use or not custom (MathFunctions) library
 # this setting is stored in the cache
 option(USE_MYMATH, "User tutorial provided math implementation" ON)
-
-# settings to allow usage of new defines in TutotialConfig.h.in
-# to check if the target platform has desired functions or not
-include(CheckSymbolExists)
-set(CMAKE_REQUIRED_LIBRARIES "m")
-check_symbol_exists(log "math.h" HAVE_LOG)
-check_symbol_exists(exp "math.h" HAVE_EXP)
 
 # configure a header file to pass few CMake settings (ver #) to the source code
 # configured file will be written into the binary tree (thus, added later)

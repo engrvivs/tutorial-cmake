@@ -11,11 +11,12 @@ directory, while MathFunctions itself doesn't
 
 ## Step 4: Basic Install ([0.5.3](https://github.com/engrvivs/tutorial-cmake/releases/tag/0.5.3)) and Test support ([0.5.4](https://github.com/engrvivs/tutorial-cmake/releases/tag/0.5.4)) through CMake
 
-## Step 5: ([0.6.0](https://github.com/engrvivs/tutorial-cmake/releases/tag/0.6.0-lw)/[0.6.1](https://github.com/engrvivs/tutorial-cmake/releases/tag/0.6.1-lw)/[0.6.2](https://github.com/engrvivs/tutorial-cmake/releases/tag/0.6.2-lw)) System Inspection
+## Step 5: ([0.6.0](https://github.com/engrvivs/tutorial-cmake/releases/tag/0.6.0-lw)/[0.6.1](https://github.com/engrvivs/tutorial-cmake/releases/tag/0.6.1-lw)/[0.6.2](https://github.com/engrvivs/tutorial-cmake/releases/tag/0.6.2)) System Inspection
 
 - test for availability of platform specific functions using `CheckSymbolExists`
 module
-- accordingly, use new defines in `TutotialConfig.h.in`
+- accordingly, use new defines in `TutorialConfig.h.in`
+- [0.6.3](https://github.com/engrvivs/tutorial-cmake/releases/tag/0.6.3-lwt) specify `PRIVATE` compile definitions, rather than through `TutorialConfig.h.in`
 
 ## References
 

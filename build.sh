@@ -26,6 +26,9 @@ fi
 # --config to specify configuration
 cmake --install
 
+# hereafter, exit shell script, as soon as any error occurs
+set -e
+
 cmake --build .
 
 # run tests

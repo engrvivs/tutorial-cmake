@@ -5,8 +5,3 @@
 
 // since the source code requires USE_MYMATH
 #cmakedefine USE_MYMATH
-
-// to be able to use them from mysqrt.cxx
-// does the platform provide exp and log functions?
-#cmakedefine HAVE_LOG
-#cmakedefine HAVE_EXP
