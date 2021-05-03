@@ -1,5 +1,8 @@
-#include <cmath> // to simulate usage of platform-specific functions
 #include <iostream>
+#if defined(HAVE_LOG) && defined(HAVE_EXP)
+// simulate usage of platform-specific functions
+#include <cmath>
+#endif
 
 // a hack square root calculation using simple operations
 double mysqrt(double x) {

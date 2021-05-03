@@ -9,8 +9,8 @@ target_include_directories(
     INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-# settings to allow usage of new defines in TutotialConfig.h.in
-# to check if the current platform/system provides desired functions or not
+# settings to allow usage of new defines so as to check
+# if the current platform/system provides desired functions or not
 include(CheckSymbolExists)
 set(CMAKE_REQUIRED_LIBRARIES "m")
 check_symbol_exists(log "math.h" HAVE_LOG)
