@@ -19,6 +19,15 @@ module
 - [0.6.3](https://github.com/engrvivs/tutorial-cmake/releases/tag/0.6.3-lwt) specify `PRIVATE` compile definitions, rather than through `TutorialConfig.h.in`
 - [0.6.4](https://github.com/engrvivs/tutorial-cmake/releases/tag/0.6.4-lw) optimized it further
 
+## Step 6: ([0.7.0](https://github.com/engrvivs/tutorial-cmake/releases/tag/0.7.0-lw)) Add a Custom Command and Generated File
+
+- Create a table (of precomputed values, to use in `mysqrt` function) as part of the build process
+- Build process:
+  - Step 1: Build the `MakeTable` executable
+  - Step 2: Run `MakeTable` to produce `Table.h`
+  - Step 3: Compile `mysqrt.cxx`, which includes `Table.h`, to produce the
+`MathFunctions` library
+
 ## References
 
 - [cmake.org](https://cmake.org/cmake/help/v3.16/guide/tutorial/index.html)

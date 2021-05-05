@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.16.3)
 #set the project name and its version
 project(
     Tutorial
-    VERSION 0.6.4
+    VERSION 0.7.0
 )
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
