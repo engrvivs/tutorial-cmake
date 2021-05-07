@@ -35,3 +35,13 @@ cmake --build .
 #ctest -N
 #ctest -VV
 ctest -C Debug -VV
+
+# create an installer in the binary directory
+echo "Creating Installer..."
+# source distribution
+cpack --config CPackSourceConfig.cmake
+# build a binary distribution from the binary directory
+#cpack
+# -G <Generator> -C <configuration>
+cpack -G ZIP -C Debug 
+#make package

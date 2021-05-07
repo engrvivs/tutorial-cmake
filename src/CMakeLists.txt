@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.16.3)
 #set the project name and its version
 project(
     Tutorial
-    VERSION 0.7.0
+    VERSION 0.8.0
 )
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -85,3 +85,14 @@ do_test(Tutorial -25 "-25 is [-nan|nan|0]")
 do_test(Tutorial 0.0001 "0.0001 is 0.01")
 do_test(Tutorial 4294967296 "4.29497e.09 is 65536")
 ## Testing Support - E ##
+
+# setup installer
+# include any runtime libraries, needed by the project for current platform
+include(InstallRequiredSystemLibraries)
+# set CPack variables to license's path and project's version
+set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/License.txt")
+set(CPACK_PACKAGE_VERSION_MAJOR "${Tutorial_VERSION_MAJOR}")
+set(CPACK_PACKAGE_VERSION_MINOR "${Tutorial_VERSION_MINOR}")
+# the CPack module uses above variables and current system's properties
+# to setup an installer
+include(CPack)

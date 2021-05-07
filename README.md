@@ -28,6 +28,10 @@ module
   - Step 3: Compile `mysqrt.cxx`, which includes `Table.h`, to produce the
 `MathFunctions` library
 
+## Step 7: ([0.8.0](https://github.com/engrvivs/tutorial-cmake/releases/tag/0.8.0-lw)) Platform-Specific Binary and Source Distribution Installer
+
+- `CPack` to create platform specific installers
+
 ## References
 
 - [cmake.org](https://cmake.org/cmake/help/v3.16/guide/tutorial/index.html)
