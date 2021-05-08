@@ -32,6 +32,11 @@ module
 
 - `CPack` to create platform specific installers
 
+## Step 8: ([0.9.0](https://github.com/engrvivs/tutorial-cmake/releases/tag/0.9.0-lw)) Support to Submit Test Results onto `CTest` module based Kitware Public Dashboard
+
+- `ctest` will build and test the project
+- `ctest` will then submit the results to [Kitware public dashboard](https://my.cdash.org/index.php?project=CMakeTutorial)
+
 ## References
 
 - [cmake.org](https://cmake.org/cmake/help/v3.16/guide/tutorial/index.html)

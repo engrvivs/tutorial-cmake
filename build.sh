@@ -45,3 +45,7 @@ cpack --config CPackSourceConfig.cmake
 # -G <Generator> -C <configuration>
 cpack -G ZIP -C Debug 
 #make package
+
+# to create simple dashboard
+#ctest [-VV] -C Debu -C Deb -C Debugugg -D Experimental
+#ctest [-VV] -D Experimental

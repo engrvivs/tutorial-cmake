@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.16.3)
 #set the project name and its version
 project(
     Tutorial
-    VERSION 0.8.0
+    VERSION 0.9.0
 )
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -55,7 +55,9 @@ install(
 )
 
 ## Testing Support - S ##
-enable_testing()
+# enable dashboard scripting
+include(CTest)
+#enable_testing() is called by CTest module
 
 # does the application run (does NOT segfault or crash and returns 0)?
 add_test(NAME Runs COMMAND Tutorial 25)
