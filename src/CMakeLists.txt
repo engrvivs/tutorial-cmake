@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.16.3)
 #set the project name and its version
 project(
     Tutorial
-    VERSION 0.9.0
+    VERSION 0.10.0
 )
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -12,22 +12,24 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# option to use or not custom (MathFunctions) library
-# this setting is stored in the cache
-option(USE_MYMATH, "User tutorial provided math implementation" ON)
+# control where static and shared libraries are built, so that on windows
+# there is no need to tinker with the path to run the executable 
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}")
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}")
+
+# allow uses to set value of BUILD_SHARED_LIBS value ON or OFF
+option(BUILD_SHARED_LIBS "Build using shared libraries" ON)
 
 # configure a header file to pass few CMake settings (ver #) to the source code
 # configured file will be written into the binary tree (thus, added later)
 configure_file(TutorialConfig.h.in TutorialConfig.h)
 
-# make building and linking the MathFunctions library conditional
-if(USE_MYMATH)
-    # add the MathFunctions library, to build it
-    add_subdirectory(MathFunctions)
-    list(APPEND EXTRA_LIBS MathFunctions)
-    # As MathFunctions usage requirement is specified, 
-    # thus, ${EXTRA_INCLUDES} can be removed.
-endif()
+# add the MathFunctions library, to build it
+add_subdirectory(MathFunctions)
+list(APPEND EXTRA_LIBS MathFunctions)
+# As MathFunctions usage requirement is specified, 
+# thus, ${EXTRA_INCLUDES} can be removed.
 
 # add the executable
 add_executable(Tutorial tutorial.cxx)

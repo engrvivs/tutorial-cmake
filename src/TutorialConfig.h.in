@@ -2,6 +2,3 @@
 // CMake replaces values for @<ABC>@, while configuring this header file
 #define Tutorial_VERSION_MAJOR @Tutorial_VERSION_MAJOR@
 #define Tutorial_VERSION_MINOR @Tutorial_VERSION_MINOR@
-
-// since the source code requires USE_MYMATH
-#cmakedefine USE_MYMATH

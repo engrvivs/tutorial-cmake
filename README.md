@@ -37,6 +37,11 @@ module
 - `ctest` will build and test the project
 - `ctest` will then submit the results to [Kitware public dashboard](https://my.cdash.org/index.php?project=CMakeTutorial)
 
+## Step 9: ([0.10.0](https://github.com/engrvivs/tutorial-cmake/releases/tag/0.10.0)) Mix Static and Shared
+
+- `BUILD_SHARED_LIBS` variable to control `add_library`
+- build libraries without explicit type (`STATIC`, `SHARED`, `MODULE` or `OBJECT`)
+
 ## References
 
 - [cmake.org](https://cmake.org/cmake/help/v3.16/guide/tutorial/index.html)

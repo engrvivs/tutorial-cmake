@@ -1,4 +1,7 @@
 #include <iostream>
+
+#include "MathFunctions.h"
+
 #if defined(HAVE_LOG) && defined(HAVE_EXP)
 // simulate usage of platform-specific functions
 #include <cmath>
@@ -7,6 +10,8 @@
 #include "Table.h"
 #endif
 
+namespace mathfunctions {
+namespace detail {
 // a hack square root calculation using simple operations
 double mysqrt(double x) {
   if (x <= 0) {
@@ -19,7 +24,7 @@ double mysqrt(double x) {
   std::cout << "Computing sqrt of " << x << " to be " << result
             << " using log and exp" << std::endl;
 #else
-  // use table to help find and initial value
+  // use table to help find an initial value
   double result = x;
   if (x >= 1 && x < 10) {
     std::cout << "Use the table to help find an initial value " << std::endl;
@@ -38,3 +43,5 @@ double mysqrt(double x) {
 
   return result;
 }
+} // namespace detail
+} // namespace mathfunctions
